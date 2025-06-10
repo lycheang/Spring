@@ -1,0 +1,68 @@
+{
+  "properties": [
+    {
+      "name": "url",
+      "type": "java.lang.String",
+      "description": "Description for url."
+    },
+    {
+      "name": "spring",
+      "type": "java.lang.String",
+      "description": "Description for spring."
+    },
+    {
+      "name": "datasource",
+      "type": "java.lang.String",
+      "description": "Description for datasource."
+    },
+    {
+      "name": "username",
+      "type": "java.lang.String",
+      "description": "Description for username."
+    },
+    {
+      "name": "password",
+      "type": "java.lang.String",
+      "description": "Description for password."
+    },
+    {
+      "name": "ddl-auto",
+      "type": "java.lang.String",
+      "description": "Description for ddl-auto."
+    },
+    {
+      "name": "hibernate",
+      "type": "java.lang.String",
+      "description": "Description for hibernate."
+    },
+    {
+      "name": "properties",
+      "type": "java.lang.String",
+      "description": "Description for properties."
+    },
+    {
+      "name": "dialect",
+      "type": "java.lang.String",
+      "description": "Description for dialect."
+    },
+    {
+      "name": "show_sql",
+      "type": "java.lang.String",
+      "description": "Description for show_sql."
+    },
+    {
+      "name": "application",
+      "type": "java.lang.String",
+      "description": "Description for application."
+    },
+    {
+      "name": "driver-class-name",
+      "type": "java.lang.String",
+      "description": "Description for driver-class-name."
+    },
+    {
+      "name": "jpa",
+      "type": "java.lang.String",
+      "description": "Description for jpa."
+    }
+  ] }
