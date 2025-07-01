@@ -6,6 +6,7 @@ import co.tic.jpaentity.feature.course.dto.CourseRequest;
 import co.tic.jpaentity.feature.course.dto.CourseRespond;
 import co.tic.jpaentity.feature.teacher.TeacherRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -35,6 +36,8 @@ public class CourseServiceImp implements CourseService {
         courseRepository.save(course);
     }
 
+
+
     @Override
     public void updateCourse(String uuid, CourseRequest courseRequest) {
         Course course=courseRepository.findByUuid(uuid);
@@ -51,5 +54,11 @@ public class CourseServiceImp implements CourseService {
         return courses.stream()
                 .map(courseMapper::toCourseResponse)
                 .toList();
+    }
+
+    @Override
+    public Page<Course> getAllCourse(int page, int size) {
+        Page<Course> courses = courseRepository.findAll(org.springframework.data.domain.PageRequest.of(page, size));
+        return courses;
     }
 }
