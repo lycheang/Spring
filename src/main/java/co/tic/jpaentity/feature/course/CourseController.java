@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/v1/course")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:63342")
 public class CourseController {
     private final CourseService courseService;
     private final CourseRepository courseRepository;
@@ -56,5 +57,14 @@ public class CourseController {
 
         return ResponseEntity.ok(response);
     }
+//    @GetMapping("/pagination")
+//    public ResponseEntity<Page<CourseRespond>> getAllCourses(@RequestParam(defaultValue = "0") int page,
+//                                                             @RequestParam(defaultValue = "10") int size
+//                                                             ) {
+//        Pageable pageable = PageRequest.of(page, size);
+//        Page<Course> coursePage = courseRepository.findAll(pageable);
+//        return ResponseEntity.ok(coursePage.map(course -> new CourseRespond(course.getUuid(), course.getName(), course.getDescription(),course.getName())));
+//    }
+
 
 }
